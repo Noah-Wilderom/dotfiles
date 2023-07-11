@@ -1,7 +1,7 @@
 local options = {
   filters = {
     dotfiles = false,
-    exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
+    exclude = { vim.fn.stdpath "config" .. "/lua/custom", "*.DS_Store" },
   },
   disable_netrw = true,
   hijack_netrw = true,
@@ -19,7 +19,7 @@ local options = {
     preserve_window_proportions = true,
   },
   git = {
-    enable = false,
+    enable = true,
     ignore = true,
   },
   filesystem_watchers = {
@@ -44,14 +44,14 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = false,
+        git = true,
       },
 
       glyphs = {
         default = "󰈚",
         symlink = "",
         folder = {
-          default = "",
+          default = "",
           empty = "",
           empty_open = "",
           open = "",
